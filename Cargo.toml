@@ -15,3 +15,13 @@ license = "MIT"
 [dependencies]
 log = "0.4.0"
 glib-sys = { version = "0.9.1", features = ["v2_44"] }
+
+[features]
+redefine_log_macros = []
+
+[dev-dependencies]
+serial_test = "0.4.0"
+
+[[example]]
+name = "override_macro_domain"
+required-features = [ "redefine_log_macros" ]
